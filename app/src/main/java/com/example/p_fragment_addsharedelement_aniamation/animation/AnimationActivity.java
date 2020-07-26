@@ -65,8 +65,6 @@ public class AnimationActivity extends AppCompatActivity {
     FragmentTransaction FragmentTransaction.setCustomAnimations://設定Fragment間的轉自訂轉場效果
     */
 
-    @NonNull
-
     //到下一頁
     private void toNext(){
         getSupportFragmentManager()
