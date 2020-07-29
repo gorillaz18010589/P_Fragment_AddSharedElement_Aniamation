@@ -81,7 +81,7 @@ public class OneFragment extends Fragment {
             public void run() {
                 setConstraintSetAnimation2();
             }
-        }, 300);
+        }, 200);
         conTopMsg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
