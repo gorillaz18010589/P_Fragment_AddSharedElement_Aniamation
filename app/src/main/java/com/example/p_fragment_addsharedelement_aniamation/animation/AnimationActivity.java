@@ -8,17 +8,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
 
 import com.example.p_fragment_addsharedelement_aniamation.R;
+import com.example.p_fragment_addsharedelement_aniamation.contraintset.ContaintActivity;
 
 public class AnimationActivity extends AppCompatActivity {
     private FirstFragment firstFragment = new FirstFragment();
     private SecondFragment secondFragment = new SecondFragment();
-    private Button btnBack,btnNext;
+    private Button btnBack,btnNext,btnPage3;
     private FrameLayout container;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +34,9 @@ public class AnimationActivity extends AppCompatActivity {
     private void init() {
         btnBack = findViewById(R.id.btnBack);
         btnNext = findViewById(R.id.btnNext);
+        btnPage3 = findViewById(R.id.btnPage3);
         container = findViewById(R.id.container);
+
 
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,6 +50,13 @@ public class AnimationActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 getSupportFragmentManager().popBackStack();
+            }
+        });
+
+        btnPage3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(AnimationActivity.this, ContaintActivity.class));
             }
         });
     }
