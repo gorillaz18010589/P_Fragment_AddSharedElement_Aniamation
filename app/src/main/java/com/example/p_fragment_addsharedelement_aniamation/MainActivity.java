@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import com.example.p_fragment_addsharedelement_aniamation.animation.AnimationActivity;
+import com.example.p_fragment_addsharedelement_aniamation.newloging.StartActivity;
 
 public class MainActivity extends AppCompatActivity {
     private LoginFragment loginFragment = new LoginFragment();
@@ -38,5 +39,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void toAnimationActivity(View view) {
         startActivity(new Intent(MainActivity.this, AnimationActivity.class));
+    }
+
+    public void toPage3(View view) {
+        startActivity(new Intent(MainActivity.this, StartActivity.class));
     }
 }
